@@ -13,6 +13,7 @@ class User (models.Model):
     first_name = models.CharField(max_length=120)
     last_name = models.CharField(max_length=120)
     email = models.EmailField('User Email')
+    birds_found = finders = models.ManyToManyField(Bird, blank=True)
 
     def __str__(self):
         return self.first_name + " " + self.last_name
@@ -23,7 +24,5 @@ class BirdFound (models.Model):
     picture = models.ImageField()
     #varible to verify if it is a bird or not?? should establish a specific model for somehting that was not found or unable to be verified
     birdfound = models.ForeignKey(Bird, blank = True, null = True, on_delete=models.CASCADE)
-    finders = models.ManyToManyField(User, blank=True)
-    models.field
     def __str__(self):
         return self.name
