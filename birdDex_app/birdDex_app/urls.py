@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from starting.views import index
+from starting.views import index, birdDex, camera
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('starting/', index),
+    path('birdDex', birdDex),
+    path('camera/', camera),
 ]
