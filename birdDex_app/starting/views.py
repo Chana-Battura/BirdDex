@@ -42,6 +42,7 @@ def camera(request):
             klass=dict_from_csv[str(index)]
             probability=pred[0][index]*100
             print(probability)
+            print(klass)
             return render(request, f"starting/birddex/{klass}.html")
 
     else:

@@ -20,10 +20,9 @@ from starting.views import index, birdDex, camera
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/', index),
+    path('starting/', index),
     path('birdDex', birdDex),
-    path('camera/', camera), 
-    path('camera/', camera),
+    path('starting/camera/', camera), 
     path('members/', include('members.urls')),
     path('members/', include('django.contrib.auth.urls')),
      
