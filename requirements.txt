@@ -1,0 +1,6 @@
+Django==4.0.4
+numpy @ file:///C:/ci/numpy_and_numpy_base_1626271900803/work
+numpydoc @ file:///tmp/build/80754af9/numpydoc_1605117425582/work
+keras==2.8.0
+Keras-Preprocessing==1.1.2
+unicodecsv==0.14.1

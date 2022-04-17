@@ -17,9 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from starting.views import index, birdDex, camera
 
+from django.views.static import serve
+from django.conf.urls import url 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('starting/', index),
+    path('/', index),
     path('birdDex', birdDex),
-    path('camera/', camera),
+    path('camera/', camera), 
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
