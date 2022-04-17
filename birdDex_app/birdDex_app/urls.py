@@ -16,17 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from starting.views import index, birdDex, camera
-
-from django.views.static import serve
-from django.conf.urls import url 
+ 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('/', index),
     path('birdDex', birdDex),
     path('camera/', camera), 
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
     path('camera/', camera),
     path('members/', include('members.urls')),
     path('members/', include('django.contrib.auth.urls')),
